@@ -119,11 +119,13 @@ void * popCurrent(List * list) {
     guardarDato = list->current->data;
     if(list->current == list->tail){
       list->tail = list->current->prev;
+      list->tail->next = NULL;
       list->current = NULL;
     }
     else{
       if(list->current == list->head){
       list->head = list->current->next;
+      list->head->prev = NULL;
       list->current = NULL;
       }
       else{
