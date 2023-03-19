@@ -134,3 +134,9 @@ list.c:69:8: error: suggest parentheses around assignment used as truth value [-
 cc1: all warnings being treated as errors
 Compilation failed
 5c63328
+Sun 19 Mar 2023 03:37:44 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 25/70
+e9d1cf1
