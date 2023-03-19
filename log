@@ -164,3 +164,29 @@ Sun 19 Mar 2023 03:42:57 AM UTC:
  tests:  9|3
 total_score: 35/70
 6b1d630
+Sun 19 Mar 2023 03:53:21 AM UTC: 
+ list.c | 16 +++++++++++++---
+ 1 file changed, 13 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:67:62: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   67 |     if(list -> current == NULL || list->head == NULL) return NULL;
+      |                                                              ^~~~
+list.c:66:6: note: declared here
+   66 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+list.c:70:39: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   70 |     if(list->current == NULL ) return NULL;
+      |                                       ^~~~
+list.c:66:6: note: declared here
+   66 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+list.c:75:39: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   75 |     if(list->current == NULL ) return NULL;
+      |                                       ^~~~
+list.c:66:6: note: declared here
+   66 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+dab6f31
