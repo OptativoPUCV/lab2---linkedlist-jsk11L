@@ -24,3 +24,14 @@ list.c:31:8: note: declared here
       |        ^~~~~~~~~~
 Compilation failed
 680b41b
+Sun 19 Mar 2023 03:21:54 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:32:10: error: variable ‘lista’ set but not used [-Werror=unused-but-set-variable]
+   32 |   List * lista = NULL;
+      |          ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5422af5
