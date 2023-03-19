@@ -102,7 +102,7 @@ void pushCurrent(List * list, void * data) {
     }
 
 }
-
+//6.
 void * popFront(List * list) {
     list->current = list->head;
     return popCurrent(list);
@@ -112,9 +112,28 @@ void * popBack(List * list) {
     list->current = list->tail;
     return popCurrent(list);
 }
-//6.
+
 void * popCurrent(List * list) {
-    return NULL;
+    void * guardarDato;
+    if(list->current == NULL) return NULL;
+    guardarDato = list->current->data;
+    if(list->current == list->tail){
+      list->tail = list->current->prev;
+      list->current = NULL;
+    }
+    else{
+      if(list->current == list->head){
+      list->head = list->current->next;
+      list->current = NULL;
+      }
+      else{
+        list->current->prev->next = list->current->next;
+        list->current->next->prev = list->current->prev;
+        list->current = NULL;
+      }
+    }
+      
+    return guardarDato;
 }
 
 void cleanList(List * list) {
