@@ -64,12 +64,15 @@ void * prevList(List * list) {
 }
 //4.
 void pushFront(List * list, void * data) {
+    if(list == NULL || list->head == NULL) return;
     list->current = list->head;
     while(list->current->next != NULL ) list->current = list->current->next;
+    if(list->current == NULL ) return;
     while(list->current->prev != NULL){
         list->current->next = list->current;
         list->current = list->current->prev;
     }
+    if(list->current == NULL ) return;
     list->head->data = data;
     return;
 }
