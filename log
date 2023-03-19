@@ -109,3 +109,17 @@ Sun 19 Mar 2023 03:34:05 AM UTC:
  tests:  5|4
 total_score: 25/70
 98dfecc
+Sun 19 Mar 2023 03:37:24 AM UTC: 
+ list.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:67:38: error: lvalue required as left operand of assignment
+   67 |     if(list == NULL || list->current = NULL || list->current->prev == NULL) return NULL;
+      |                                      ^
+list.c:69:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   69 |     if(list->current = NULL) return NULL;
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+35af142
