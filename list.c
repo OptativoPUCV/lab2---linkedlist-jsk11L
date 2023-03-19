@@ -35,13 +35,9 @@ List * createList() {
 }
 //2.
 void * firstList(List * list) {
-    if (list == NULL || list->head == NULL) {
-        return NULL;
-    }
+    if (list->current == NULL || list->head == NULL) return NULL;
     list->current = list->head;
-    if (list->current == NULL) {
-        return NULL;
-    }
+    if (list->current == NULL) return NULL;
     return list->current->data;
 }
 
